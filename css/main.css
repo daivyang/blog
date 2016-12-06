@@ -318,7 +318,6 @@ pre > code {
 .post-list {
     margin-left: 0;
     list-style: none;
-    width: 500px;
 }
 
 .post-list > li {
