@@ -268,7 +268,7 @@ propertyPanel.prototype.showLoadingWindow = function(){
         height: 80,
         closed: false,
         cache: true,
-        href: context + 'web-topology/loading.html',
+        href: context + 'post/web-topology/loading.html',
         modal: true,
         minimizable : false,
         maximizable : false,
@@ -286,7 +286,7 @@ propertyPanel.prototype.showHelpWindow = function(){
         width: 800,
         height: 600,
         cache: true,
-        href: context + 'web-topology/help.html',
+        href: context + 'post/web-topology/help.html',
         modal: true,
         minimizable : false,
         maximizable : false,
@@ -385,7 +385,7 @@ propertyPanel.prototype.loadTopology = function (backImg,templateId,topologyId,t
     }
     $.ajax({
         //topologyManage/loadTopologyJSON
-        url: context + 'web-topology/topology.html',
+        url: context + 'post/web-topology/topology.html',
         async: false,
         type: "GET",
         dataType: "html",
@@ -551,7 +551,7 @@ propertyPanel.prototype.resetPanelProperty = function(title,propTitle,index,temp
     //获取隐藏域中的moduleId和envTemplateId
     var moduleId = $("#nodeModuleIdHidden").val();
     var envTemplateId = $("#nodeEnvTemplateIdHidden").val();
-    
+
     if(cuurPanel){
     	if(title.indexOf("路由器连接信息")>0){
     		cuurPanel.panel("refresh",d[index]["url"]);
@@ -559,7 +559,7 @@ propertyPanel.prototype.resetPanelProperty = function(title,propTitle,index,temp
         	cuurPanel.panel("refresh",d[index]["url"] + "?templateId=" + templateId+"&moduleId="+moduleId+"&envTemplateId="+envTemplateId);
         }
     }
-        
+
 }
 
 /**
@@ -1638,7 +1638,7 @@ networkTopologyEditor.prototype.drag = function (modeDiv, drawArea, text) {
                 node.fontColor = self.config.nodeFontColor;
                 node.setBound((e.layerX ? e.layerX : e.offsetX) - self.scene.translateX - self.config.defaultWidth / 2, (e.layerY ? e.layerY : e.offsetY) - self.scene.translateY - self.config.defaultHeight / 2,self.config.defaultWidth,self.config.defaultHeight);
                 //设备图片
-                node.setImage(context + 'web-topology/icon/' + img);
+                node.setImage(context + 'post/web-topology/icon/' + img);
                 //var cuurId = "device" + (++self.modeIdIndex);
                 var cuurId = "" + new Date().getTime() * Math.random();
                 node.deviceId = cuurId;
