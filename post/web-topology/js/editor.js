@@ -385,7 +385,7 @@ propertyPanel.prototype.loadTopology = function (backImg,templateId,topologyId,t
     }
     $.ajax({
         //topologyManage/loadTopologyJSON
-        url: context + 'topology.html',
+        url: context + 'post/web-topology/topology.html',
         async: false,
         type: "GET",
         dataType: "html",
